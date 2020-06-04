@@ -35,6 +35,7 @@ const CreatePoint = () => {
     0,
   ]);
 
+  // ********** useEffect responsavel por buscar a localização atual ********** //
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       const { latitude, longitude } = position.coords;
@@ -42,12 +43,14 @@ const CreatePoint = () => {
     });
   }, []);
 
+  // ********** useEffect responsavel por buscar todos os items ********** //
   useEffect(() => {
     api.get("/items").then((res) => {
       setItems(res.data);
     });
   }, []);
 
+  // ********** useEffect responsavel por buscar todas as ufs ********** //
   useEffect(() => {
     axios
       .get<IBGEufs[]>(
@@ -59,6 +62,7 @@ const CreatePoint = () => {
       });
   }, []);
 
+  // ********** useEffect responsavel por buscar todas as cidades baseado na uf selecionada ********** //
   useEffect(() => {
     if (selectedUf === "0") {
       return;
