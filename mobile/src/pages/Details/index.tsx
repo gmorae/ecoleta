@@ -5,7 +5,7 @@ import {
   Image,
   Text,
   SafeAreaView,
-  Linking
+  Linking,
 } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { Feather as Icon, FontAwesome } from "@expo/vector-icons";
@@ -22,6 +22,7 @@ interface Params {
 interface Data {
   point: {
     image: string;
+    image_url: string;
     name: string;
     email: string;
     whatsapp: string;
@@ -43,7 +44,7 @@ const Details = () => {
   const routeParams = route.params as Params;
 
   useEffect(() => {
-    api.get(`points/${routeParams.point_id}`).then((res) => {
+    api.get(`points/${routeParams.point_id}`).then((res) => {      
       setData(res.data);
     });
   }, []);
@@ -60,7 +61,9 @@ const Details = () => {
   }
 
   function handleWhatsapp() {
-    Linking.openURL(`whatsapp://send?phone=${data.point.whatsapp}&text=Tenho interesse sobre coleta de residuo`)
+    Linking.openURL(
+      `whatsapp://send?phone=${data.point.whatsapp}&text=Tenho interesse sobre coleta de residuo`
+    );
   }
 
   if (!data.point) {
@@ -73,7 +76,7 @@ const Details = () => {
           <Icon name="arrow-left" size={30} color="#34cb79" />
         </TouchableOpacity>
 
-        <Image style={styles.pointImage} source={{ uri: data.point.image }} />
+        <Image style={styles.pointImage} source={{ uri: data.point.image_url }} />
 
         <Text style={styles.pointName}>{data.point.name}</Text>
         <Text style={styles.pointItems}>
