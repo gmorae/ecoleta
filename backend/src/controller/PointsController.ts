@@ -21,9 +21,8 @@ class PointsController {
 
     const serializedPoints = points.map((point) => {
       return {
-        id: point.id,
-        name: point.title,
-        image: `${url}/uploads/${point.image}`,
+        ...point,
+        image_url: `${url}/uploads/${point.image}`,
       };
     });
 
@@ -46,10 +45,10 @@ class PointsController {
       .where("point_items.point_id", id)
       .select("items.title");
 
-      const serializedPoint = {
-        ...point,
-        image_url: `${url}/uploads/${point.image}`
-      }
+    const serializedPoint = {
+      ...point,
+      image_url: `${url}/uploads/${point.image}`,
+    };
 
     //select * from `items` inner join `point_items` on `items`.`id` = `point_item`.`item_id` where `point_item`.`point_id` = '1'
 
