@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="NextLevelWeek" title="#NextLevelWeek" src="./github/banner.png" />
+    <img alt="NextLevelWeek" title="#NextLevelWeek" src="./.github/banner.png" />
 </h1>
 
 <h4 align="center"> 
@@ -13,7 +13,7 @@
 
   	
   <a href="https://www.linkedin.com/in/leonardo-dev/">
-    <img alt="Made by gmorae" src="https://img.shields.io/badge/made%20by-leon--carvalho-%2304D361">
+    <img alt="Made by gmorae" src="https://img.shields.io/badge/made%20by-Gabriel--Moraes-%2304D361">
   </a>
 	
   
@@ -64,17 +64,17 @@ O layout da aplicação está disponível no Figma:
 ### Mobile
 
 <p align="center">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./github/home-mobile.png" width="200px">
+  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./.github/home-mobile.png" width="200px">
 
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./github/detalhes-mobile.svg" width="200px">
+  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./.github/detalhes-mobile.svg" width="200px">
 </p>
 
 ### Web
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./github/web.svg" width="400px">
+  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./.github/web.svg" width="400px">
 
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./github/sucesso-web.svg" width="400px">
+  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./.github/sucesso-web.svg" width="400px">
 </p>
 
 ## 🛠 Tecnologias
